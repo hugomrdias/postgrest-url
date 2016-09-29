@@ -21,7 +21,8 @@ npm test -s
 npm run watch -- -s
 ```
 
-## Release and publish
+## Release
+https://github.com/angular/angular.js/blob/master/CONTRIBUTING.md#commit
 https://github.com/conventional-changelog/standard-version
 
 ```sh
@@ -32,6 +33,7 @@ npm run release
 ## Todo
 - [ ] add tests
 - [ ] add docs and examples
+- [ ] dont build all targets in dev
 
 ## License
 
