@@ -8,15 +8,15 @@ export default {
         {
             dest: 'dist/postgrest-url.cjs.js',
             format: 'cjs'
+        },
+        {
+            dest: 'dist/postgrest-url.umd.js',
+            format: 'umd',
+            moduleName: 'postgrestUrl'
+        },
+        {
+            dest: 'dist/postgrest-url.es.js',
+            format: 'es'
         }
-        // {
-        //     dest: 'dist/postgrest-url.umd.js',
-        //     format: 'umd',
-        //     moduleName: 'postgrestUrl'
-        // },
-        // {
-        //     dest: 'dist/postgrest-url.es.js',
-        //     format: 'es'
-        // }
     ]
 };

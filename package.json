@@ -16,12 +16,14 @@
     "lint": "eslint --quiet --cache *.js",
     "report": "nyc report --reporter=html",
     "watch": "clear && onchange '*.js' -v -- npm test",
+    "prerelease": "npm run build",
     "release": "standard-version",
     "commit": "git-cz -a",
     "check": "npm outdated --depth 0"
   },
   "files": [
-    "dist"
+    "dist",
+    "index.js"
   ],
   "keywords": [
     "postgrest",
