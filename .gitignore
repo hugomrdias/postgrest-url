@@ -1,0 +1,22 @@
+# Editors
+.vscode
+!.vscode/settings.json
+
+# Logs
+logs
+*.log
+npm-debug.log*
+
+# Dependency directories
+node_modules
+typings
+
+# Optional eslint cache
+.eslintcache
+
+# Code coverage
+coverage
+.nyc_output
+
+# Outputs
+dist

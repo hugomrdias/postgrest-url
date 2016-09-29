@@ -1,0 +1,57 @@
+{
+  "name": "postgrest-url",
+  "version": "0.0.1",
+  "description": "Build urls for PostgREST",
+  "license": "MIT",
+  "repository": "hugomrdias/postgrest-url",
+  "author": "Hugo Dias <mail@hugodias.me> (http://hugodias.me/)",
+  "main": "dist/postgrest-url.cjs.js",
+  "module": "dist/postgrest-url.es.js",
+  "jsnext:main": "dist/postgrest-url.es.js",
+  "scripts": {
+    "clean": "rm -rf dist && mkdir dist",
+    "build": "npm run clean && rollup -c",
+    "pretest": "npm run lint && npm run build",
+    "test": "nyc ava",
+    "lint": "eslint --quiet --cache *.js",
+    "report": "nyc report --reporter=html",
+    "watch": "clear && onchange '*.js' -v -- npm test",
+    "release": "standard-version",
+    "publish": "git push --follow-tags origin master; npm publish",
+    "commit": "git-cz"
+  },
+  "files": [
+    "dist"
+  ],
+  "keywords": [
+    "postgrest",
+    "postgres",
+    "sql",
+    "rest",
+    "url"
+  ],
+  "devDependencies": {
+    "ava": "0.16.0",
+    "buble": "0.14.0",
+    "commitizen": "2.8.6",
+    "cz-conventional-changelog": "1.2.0",
+    "eslint": "3.6.1",
+    "eslint-config-halo": "1.4.0",
+    "nyc": "8.3.0",
+    "onchange": "3.0.2",
+    "rollup": "0.36.1",
+    "rollup-plugin-buble": "0.14.0",
+    "standard-version": "2.4.0"
+  },
+  "eslintConfig": {
+    "extends": "halo",
+    "parserOptions": {
+      "sourceType": "module"
+    }
+  },
+  "config": {
+    "commitizen": {
+      "path": "cz-conventional-changelog"
+    }
+  }
+}
