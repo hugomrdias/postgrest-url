@@ -21,6 +21,14 @@ npm run watch -- -s
 npm test -s
 ```
 
+## Release and publish
+https://github.com/conventional-changelog/standard-version
+
+```sh
+npm run release
+npm run publish
+```
+
 ## Todo
 - [ ] add tests
 
