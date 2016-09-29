@@ -16,21 +16,22 @@ Check the examples and code in the test folder.
 ## Build and test
 ```sh
 
-npm run watch -- -s
-
 npm test -s
+# run tests on changes
+npm run watch -- -s
 ```
 
 ## Release and publish
 https://github.com/conventional-changelog/standard-version
 
 ```sh
+npm run commmit -- -a
 npm run release
-npm run publish
 ```
 
 ## Todo
 - [ ] add tests
+- [ ] add docs and examples
 
 ## License
 

@@ -17,8 +17,7 @@
     "report": "nyc report --reporter=html",
     "watch": "clear && onchange '*.js' -v -- npm test",
     "release": "standard-version",
-    "publish": "git push --follow-tags origin master; npm publish",
-    "commit": "git-cz",
+    "commit": "git-cz -a",
     "check": "npm outdated --depth 0"
   },
   "files": [
