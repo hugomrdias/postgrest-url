@@ -22,7 +22,7 @@ npm run watch -- -s
 ```
 
 ## Release
-https://github.com/angular/angular.js/blob/master/CONTRIBUTING.md#commit
+https://github.com/angular/angular.js/blob/master/CONTRIBUTING.md#commit   
 https://github.com/conventional-changelog/standard-version
 
 ```sh
