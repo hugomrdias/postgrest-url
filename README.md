@@ -31,9 +31,9 @@ npm run release
 ```
 
 ## Todo
-- [ ] add tests
 - [ ] add docs and examples
-- [ ] dont build all targets in dev
+- [ ] urlencode where necessary
+- [ ] jsonb stuff   
 
 ## License
 
