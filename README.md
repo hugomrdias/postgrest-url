@@ -34,7 +34,7 @@ npm run release
 - [ ] add docs and examples
 - [ ] urlencode where necessary
 - [ ] jsonb stuff   
-- [ ] travis setup
+- [ ] add browser test to travis
 
 ## License
 
