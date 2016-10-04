@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.2.0"></a>
+# [0.2.0](https://github.com/hugomrdias/postgrest-url/compare/v0.1.1...v0.2.0) (2016-10-04)
+
+
+### Features
+
+* add safeguards, auto {*}, table name with alias  ([52978a8](https://github.com/hugomrdias/postgrest-url/commit/52978a8))
+* add tests ([569b495](https://github.com/hugomrdias/postgrest-url/commit/569b495))
+* add travis and codecov ([e3d6cf8](https://github.com/hugomrdias/postgrest-url/commit/e3d6cf8))
+
+
+
 <a name="0.1.1"></a>
 ## [0.1.1](https://github.com/hugomrdias/postgrest-url/compare/v0.1.0...v0.1.1) (2016-09-29)
 
