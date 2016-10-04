@@ -1,4 +1,4 @@
-# postgrest-url 
+# postgrest-url [![Build Status](https://travis-ci.org/hugomrdias/postgrest-url.svg?branch=master)](https://travis-ci.org/hugomrdias/postgrest-url) [![codecov](https://codecov.io/gh/hugomrdias/postgrest-url/branch/master/graph/badge.svg)](https://codecov.io/gh/hugomrdias/postgrest-url)
 > Build urls for PostgREST
 
 This is for advanced users.
