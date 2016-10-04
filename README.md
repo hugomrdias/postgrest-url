@@ -1,4 +1,4 @@
-# postgrest-url [![Build Status](https://travis-ci.org/hugomrdias/postgrest-url.svg?branch=master)](https://travis-ci.org/hugomrdias/postgrest-url) [![codecov](https://codecov.io/gh/hugomrdias/postgrest-url/branch/master/graph/badge.svg)](https://codecov.io/gh/hugomrdias/postgrest-url)
+# postgrest-url [![Build Status](https://travis-ci.org/hugomrdias/postgrest-url.svg?branch=master)](https://travis-ci.org/hugomrdias/postgrest-url) [![codecov](https://codecov.io/gh/hugomrdias/postgrest-url/branch/master/graph/badge.svg)](https://codecov.io/gh/hugomrdias/postgrest-url) [![NPM Version](https://img.shields.io/npm/v/postgrest-url.svg)](https://www.npmjs.com/package/postgrest-url) [![NPM Downloads](https://img.shields.io/npm/dt/postgrest-url.svg)](https://www.npmjs.com/package/postgrest-url) [![NPM License](https://img.shields.io/npm/l/postgrest-url.svg)](https://www.npmjs.com/package/postgrest-url) 
 > Build urls for PostgREST
 
 This is for advanced users.
