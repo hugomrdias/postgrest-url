@@ -54,7 +54,7 @@
     "nyc": "8.3.0",
     "onchange": "3.0.2",
     "standard-version": "2.4.0",
-    "tape": "4.6.1",
+    "tape": "4.6.2",
     "tape-run": "2.1.4"
   },
   "eslintConfig": {
