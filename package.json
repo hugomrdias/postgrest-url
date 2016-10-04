@@ -6,7 +6,7 @@
   "repository": "hugomrdias/postgrest-url",
   "author": "Hugo Dias <mail@hugodias.me> (http://hugodias.me/)",
   "main": "dist/postgrest-url.cjs.js",
-  "browser" : "dist/postgrest-url.umd.js",
+  "browser": "dist/postgrest-url.umd.js",
   "module": "index.js",
   "jsnext:main": "index.js",
   "scripts": {
@@ -24,7 +24,8 @@
     "test:electron": "browserify test/*.js -t [ babelify ] | tape-run",
     "test:browsers": "npm run test:firefox && npm run test:chrome",
     "test": "tape -r babel-register test/*.js",
-    "cov": "nyc npm t -s && nyc report --reporter=html && http-server coverage -o -c-1"
+    "cov": "nyc npm t -s && nyc report --reporter=html && http-server coverage -o -c-1",
+    "cov:report": "nyc npm test && nyc report --reporter=text-lcov > coverage.lcov && codecov"
   },
   "files": [
     "dist",
@@ -43,6 +44,7 @@
     "babel-preset-es2015": "6.16.0",
     "babelify": "7.3.0",
     "browserify": "13.1.0",
+    "codecov": "1.0.1",
     "commitizen": "2.8.6",
     "cz-conventional-changelog": "1.2.0",
     "eslint": "3.6.1",
