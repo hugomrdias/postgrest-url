@@ -1,7 +1,7 @@
 # postgrest-url [![Build Status](https://travis-ci.org/hugomrdias/postgrest-url.svg?branch=master)](https://travis-ci.org/hugomrdias/postgrest-url) [![codecov](https://codecov.io/gh/hugomrdias/postgrest-url/branch/master/graph/badge.svg)](https://codecov.io/gh/hugomrdias/postgrest-url) [![NPM Version](https://img.shields.io/npm/v/postgrest-url.svg)](https://www.npmjs.com/package/postgrest-url) [![NPM Downloads](https://img.shields.io/npm/dt/postgrest-url.svg)](https://www.npmjs.com/package/postgrest-url) [![NPM License](https://img.shields.io/npm/l/postgrest-url.svg)](https://www.npmjs.com/package/postgrest-url) 
 > Build urls for PostgREST
 
-postgrest-url is a small library focused in the construction of urls for [PostgREST](http://postgrest.com/). Based on query definition written in object notation the library outputs a safe url 
+postgrest-url is a small library focused in the construction of urls for [PostgREST](http://postgrest.com/). Based on query definition written in object notation the library outputs a safe url.
 
 
 ## Install
@@ -28,12 +28,18 @@ var zone = {
     }
 };
 
+url(level);
+// level?id=eq.1&limit=10&offset=3
+
+url(zone);
+// zone?id=eq.1&limit=10&offset=3
+
 url({
     space: {
         id: 'eq.1',
         select: ['*', level]
     }
-})
+});
 // space?select=*,levels:level{*}&id=eq.1&level.id=eq.1&level.limit=10&level.offset=3
 
 url({
@@ -41,7 +47,7 @@ url({
         id: 'eq.1',
         select: ['*', level, zone]
     }
-})
+});
 
 // space?select=*,levels:level{*},zones:zone{*}&id=eq.1&level.id=eq.1&level.limit=10&level.offset=3&zone.id=eq.1&zone.limit=10&zone.offset=3
 
@@ -58,10 +64,10 @@ url({
             }
         }]
     }
-})
+});
 // space?select=*,levels:level{*,zones:zone{*}}&id=eq.1&level.id=eq.1&level.limit=10&level.offset=3&level.order=age.asc&level.zone.id=eq.1&level.zone.limit=10&level.zone.offset=3
 ```
-Check the code in the test folder.
+Check the code in the test folder for more.
 
 ## Build and test
 ```sh
