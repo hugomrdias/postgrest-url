@@ -152,6 +152,3 @@ test('select as a string', t => {
         }
     }), 'space?select=id,name,age');
 });
-
-
-// test.todo('will think about writing this later');
