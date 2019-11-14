@@ -96,7 +96,7 @@ function embed(obj, params, select, level, levelIndex) {
                 }
 
                 if (levelIndex > 0) {
-                    select.push(table + '{' + currentSelect.join(',') + '}');
+                    select.push(table + '(' + currentSelect.join(',') + ')');
                 } else {
                     select.push(currentSelect.join(','));
                 }
@@ -110,6 +110,6 @@ function embed(obj, params, select, level, levelIndex) {
     // embedded entities need the '{*}'
     // so if select is undefined we add it automatically
     if (levelIndex > 0 && currentSelect.length === 0) {
-        select.push(table + '{*}');
+        select.push(table + '(*)');
     }
 }
