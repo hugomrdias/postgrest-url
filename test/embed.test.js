@@ -13,7 +13,7 @@ test('basic emdeb', t => {
         }
     };
 
-    t.equal(url(value), 'space?select=*,level{*}&id=eq.1');
+    t.equal(url(value), 'space?select=*,level(*)&id=eq.1');
     t.end();
 });
 
@@ -29,7 +29,7 @@ test('basic emdeb with empty select', t => {
         }
     };
 
-    t.equal(url(value), 'space?select=*,level{*}&id=eq.1&level.id=eq.1');
+    t.equal(url(value), 'space?select=*,level(*)&id=eq.1&level.id=eq.1');
     t.end();
 });
 
@@ -57,7 +57,7 @@ test('composable', t => {
     t.plan(3);
     t.equal(url(space), 'space?select=*&id=eq.1');
     t.equal(url(level), 'level?id=eq.1');
-    t.equal(url(spaceLevel), 'space?select=*,level{*}&id=eq.1&level.id=eq.1');
+    t.equal(url(spaceLevel), 'space?select=*,level(*)&id=eq.1&level.id=eq.1');
 });
 
 
@@ -85,7 +85,7 @@ test('composable with alias', t => {
     t.plan(3);
     t.equal(url(space), 'space?select=*&id=eq.1');
     t.equal(url(level), 'level?id=eq.1');
-    t.equal(url(spaceLevel), 'space?select=*,levels:level{*}&id=eq.1&level.id=eq.1');
+    t.equal(url(spaceLevel), 'space?select=*,levels:level(*)&id=eq.1&level.id=eq.1');
 });
 
 test('embedded limit, order, offset', t => {
@@ -112,7 +112,7 @@ test('embedded limit, order, offset', t => {
                 select: ['*', level]
             }
         }),
-        'space?select=*,levels:level{*}&id=eq.1&level.id=eq.1&level.limit=10&level.offset=3'
+        'space?select=*,levels:level(*)&id=eq.1&level.id=eq.1&level.limit=10&level.offset=3'
     );
     t.equal(
         url({
@@ -121,7 +121,7 @@ test('embedded limit, order, offset', t => {
                 select: ['*', level, zone]
             }
         }),
-        'space?select=*,levels:level{*},zones:zone{*}&id=eq.1&level.id=eq.1&level.limit=10&level.offset=3&zone.id=eq.1&zone.limit=10&zone.offset=3'
+        'space?select=*,levels:level(*),zones:zone(*)&id=eq.1&level.id=eq.1&level.limit=10&level.offset=3&zone.id=eq.1&zone.limit=10&zone.offset=3'
     );
     t.equal(
         url({
@@ -138,7 +138,7 @@ test('embedded limit, order, offset', t => {
                 }]
             }
         }),
-        'space?select=*,levels:level{*,zones:zone{*}}&id=eq.1&level.id=eq.1&level.limit=10&level.offset=3&level.order=age.asc&level.zone.id=eq.1&level.zone.limit=10&level.zone.offset=3'
+        'space?select=*,levels:level(*,zones:zone(*))&id=eq.1&level.id=eq.1&level.limit=10&level.offset=3&level.order=age.asc&level.zone.id=eq.1&level.zone.limit=10&level.zone.offset=3'
     );
 });
 
@@ -168,7 +168,7 @@ test('select as a string embedded', t => {
                 }]
             }
         }),
-        'space?select=*,levels:level{*,zones:zone{id,name,age}}&id=eq.1&level.id=eq.1&level.limit=10&level.offset=3&level.order=age.asc&level.zone.id=eq.1&level.zone.limit=10&level.zone.offset=3'
+        'space?select=*,levels:level(*,zones:zone(id,name,age))&id=eq.1&level.id=eq.1&level.limit=10&level.offset=3&level.order=age.asc&level.zone.id=eq.1&level.zone.limit=10&level.zone.offset=3'
     );
     t.equal(
         url({
@@ -185,6 +185,6 @@ test('select as a string embedded', t => {
                 }]
             }
         }),
-        'space?select=*,levels:level{*}&id=eq.1&level.id=eq.1&level.limit=10&level.offset=3&level.order=age.asc',
+        'space?select=*,levels:level(*)&id=eq.1&level.id=eq.1&level.limit=10&level.offset=3&level.order=age.asc',
         'add * for select invalid type');
 });
