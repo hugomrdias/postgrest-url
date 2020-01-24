@@ -1,6 +1,6 @@
 {
   "name": "postgrest-url",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Build urls for PostgREST",
   "license": "MIT",
   "repository": "hugomrdias/postgrest-url",
