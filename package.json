@@ -45,7 +45,7 @@
     "babel-register": "6.16.3",
     "babelify": "7.3.0",
     "browserify": "13.1.0",
-    "codecov": "1.0.1",
+    "codecov": "3.7.1",
     "commitizen": "2.8.6",
     "cz-conventional-changelog": "1.2.0",
     "eslint": "3.6.1",
